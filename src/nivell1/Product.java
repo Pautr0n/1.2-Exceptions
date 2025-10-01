@@ -1,5 +1,3 @@
-package nivell1;
-
 class Product {
 
     private String name;

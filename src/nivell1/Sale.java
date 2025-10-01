@@ -1,34 +1,39 @@
-package nivell1;
-
 import java.util.ArrayList;
 
 class Sale {
-
-    private ArrayList<Product> sale;
+    private static final String CUSTOMMESSAGE = "To proceed with a sale first you need to include products.";
+    private ArrayList<Product> products;
     private double totalCost;
 
     Sale(){
 
-        sale = new ArrayList<Product>();
+        products = new ArrayList<Product>();
 
     }
 
     protected void addProduct(Product product){
 
-        sale.add(product);
+        products.add(product);
 
     }
 
-    protected double getTotalCost(ArrayList<Product> products){
+    protected String getTotalCost(ArrayList<Product> products) throws EmptySaleException{
 
-        for (Product product : products) {
+        if(products.isEmpty()) throw new EmptySaleException(CUSTOMMESSAGE);
 
-            totalCost += product.getPrice();
+        for (int i=0; i < products.size(); i++) {
+
+            totalCost += products.get(i).getPrice();
 
         }
 
-        return totalCost;
+        return "Total amount to be paid: " + totalCost;
     }
+
+    protected ArrayList<Product> getProducts(){
+        return products;
+    }
+
 
     protected double getOutOfBoundsTotalCost(ArrayList<Product> products){
 
@@ -40,6 +45,7 @@ class Sale {
 
         return totalCost;
     }
+
 
     {
         totalCost = 0;
