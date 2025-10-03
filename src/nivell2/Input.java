@@ -8,7 +8,7 @@ public class Input {
     private static Scanner src = new Scanner(System.in);
 
 
-    public static byte readByte(String message) throws InputMismatchException {
+    public static byte readByte(String message){
 
         while(true){
 
@@ -19,7 +19,7 @@ public class Input {
                 IO.println("That's right, this is a byte data type:");
                 return byteInput;
             }catch (InputMismatchException e){
-                IO.println("This is not a bye, please enter a byte:");
+                IO.println("This is not a bye, please enter a byte:" + e);
                 src.nextLine();
             }
 
@@ -27,7 +27,7 @@ public class Input {
 
     }
 
-    public static int readInt(String message)throws InputMismatchException {
+    public static int readInt(String message){
 
         while(true){
 
@@ -46,7 +46,7 @@ public class Input {
 
     }
 
-    public static float readFloat(String message)throws InputMismatchException {
+    public static float readFloat(String message){
 
         while(true){
 
@@ -65,7 +65,7 @@ public class Input {
 
     }
 
-    public static double readDouble(String message)throws InputMismatchException {
+    public static double readDouble(String message){
 
         while(true){
 
@@ -76,7 +76,54 @@ public class Input {
                 IO.println("That's right, this is a double data type:");
                 return doubleInput;
             }catch (InputMismatchException e){
-                IO.println("This is not a double, please enter a double:");
+                IO.println("This's not a double, please enter a double:");
+                src.nextLine();
+            }
+
+        }
+
+    }
+
+    public static char readChar(String message) {
+
+        while(true){
+
+            try{
+                IO.println(message);
+                String initialInput;
+                char charInput;
+                initialInput = src.next();
+                if(initialInput.length()>1){
+                    throw new CustomInputException("That's not a single Character, please enter a single Characte.");
+                }
+                charInput = initialInput.charAt(0);
+                return charInput;
+            }catch (CustomInputException cie){
+                IO.println(cie.getMessage());
+                src.nextLine();
+            }
+
+        }
+
+    }
+
+    public static String readString(String message){
+
+        while(true){
+            try{
+                IO.println(message);
+                String stringInput;
+                char ch;
+                stringInput = src.next();
+                for(int i=0; i < stringInput.length(); i++){
+                    ch = stringInput.charAt(i);
+                    if(Character.isUpperCase(ch)){
+                        throw new CustomInputException("¡¡¡I said no UPPERCASE!!");
+                    }
+                }
+                return stringInput;
+            }catch (CustomInputException cie){
+                IO.println(cie.getMessage());
                 src.nextLine();
             }
 
