@@ -131,5 +131,34 @@ public class Input {
 
     }
 
+    public static boolean readYesOrNo(String message){
+
+        while(true){
+
+            try{
+                boolean answer;
+                IO.println(message);
+                String initialInput;
+                char answerInput;
+                initialInput = src.next();
+                if(initialInput.length()>1){
+                    throw new CustomInputException("No other input allowed, just 's' or 'n' allowed.");
+                }
+                answerInput = initialInput.charAt(0);
+                answerInput = Character.toLowerCase(answerInput);
+                if(answerInput == 's'){
+                    return answer = true;
+                }else if (answerInput == 'n'){
+                    return answer = false;
+                }
+                throw new CustomInputException("No other input allowed, just 's' or 'n' allowed.");
+            }catch(CustomInputException cie){
+                IO.println(cie.getMessage());
+                src.nextLine();
+            }
+
+        }
+
+    }
 
 }

@@ -11,6 +11,7 @@ class TestInput {
         IO.println(Input.readDouble("Now it's double data type time. Introduce a double type value:"));
         IO.println(Input.readChar("Moving forward to Char type. Enter one character and only one:"));
         IO.println(Input.readString("Now introduce a string but uppercase letters aren't valid, just lower case:"));
+        IO.println(Input.readYesOrNo("Last but not least, have you enjoyed this program? type 's' (yes) or 'n' (no):"));
 
     }
 
