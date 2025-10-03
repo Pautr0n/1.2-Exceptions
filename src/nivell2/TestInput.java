@@ -4,12 +4,11 @@ class TestInput {
 
     void main(){
 
-        IO.println("Welcome to our Club's registration form.");
-        Input.readByte("First of all introduce your age:");
-        Input.readInt("Now introduce your DNI number, just numbers not dots, commas or characters:");
-        Input.readFloat("To let you join our Club, please introduce a valid float number:");
-        Input.readDouble("Last but not least, to continue with the registration process, please introduce a double");
-
+        IO.println("Welcome to a data input tester.");
+        IO.println(Input.readByte("First of all introduce a Byte data type."));
+        IO.println(Input.readInt("Now introduce an Integer data type."));
+        IO.println(Input.readFloat("Continue by introducing a float data type."));
+        IO.println(Input.readDouble("Now it's double data type time."));
 
     }
 

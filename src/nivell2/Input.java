@@ -16,7 +16,7 @@ public class Input {
                 IO.println(message);
                 byte byteInput;
                 byteInput = src.nextByte();
-                IO.println("Age introduced:");
+                IO.println("That's right, this is a byte data type:");
                 return byteInput;
             }catch (InputMismatchException e){
                 IO.println("This is not a bye, please enter a byte:");
@@ -35,7 +35,7 @@ public class Input {
                 IO.println(message);
                 int intInput;
                 intInput = src.nextInt();
-                IO.println("DNI Introduced:");
+                IO.println("That's right, this is an integer data type:");
                 return intInput;
             }catch (InputMismatchException e){
                 IO.println("This is not a integer, please enter an integer:");
@@ -54,6 +54,7 @@ public class Input {
                 IO.println(message);
                 float floatInput;
                 floatInput = src.nextFloat();
+                IO.println("That's right, this is a float data type:");
                 return floatInput;
             }catch (InputMismatchException e){
                 IO.println("This is not a float, please enter a float:");
@@ -72,6 +73,7 @@ public class Input {
                 IO.println(message);
                 double doubleInput;
                 doubleInput = src.nextDouble();
+                IO.println("That's right, this is a double data type:");
                 return doubleInput;
             }catch (InputMismatchException e){
                 IO.println("This is not a double, please enter a double:");
@@ -82,9 +84,5 @@ public class Input {
 
     }
 
-    public static char readChar(String message){
-
-
-    }
 
 }
