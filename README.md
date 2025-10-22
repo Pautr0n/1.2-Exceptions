@@ -1,6 +1,14 @@
-#Exercice Description:
+#Exercise Description:
 
-Exercice to practice with java Exceptions, Exception handling and Custom Exceptions
+Nivell 1: 
+Configure a custom exception to be thrown by a method called getTotalCost,
+configure a method that throws an indexOutOfBounds.
+
+Nivell 2:
+Configure a class to manage the exceptions that could be thrown when introducing data through
+a scanner (keyboard).
+
+
 
 #Technologies Used
 
