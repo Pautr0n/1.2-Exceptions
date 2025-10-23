@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    private static Scanner src = new Scanner(System.in);
+    private static final Scanner src = new Scanner(System.in);
 
 
     public static byte readByte(String message) {
@@ -136,7 +136,6 @@ public class Input {
         while (true) {
 
             try {
-                boolean answer;
                 System.out.println(message);
                 String initialInput;
                 char answerInput;
@@ -147,9 +146,9 @@ public class Input {
                 answerInput = initialInput.charAt(0);
                 answerInput = Character.toLowerCase(answerInput);
                 if (answerInput == 's') {
-                    return answer = true;
+                    return true;
                 } else if (answerInput == 'n') {
-                    return answer = false;
+                    return false;
                 }
                 throw new InputException("No other input allowed, just 's' or 'n' allowed.");
             } catch (InputException cie) {

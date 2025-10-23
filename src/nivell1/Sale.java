@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 class Sale {
     private static final String CUSTOMMESSAGE = "To proceed with a sale first you need to include products.";
-    private ArrayList<Product> products;
+    private final ArrayList<Product> products;
     private double totalCost;
 
     public Sale() {
 
-        products = new ArrayList<Product>();
+        products = new ArrayList<>();
 
     }
 

@@ -1,6 +1,6 @@
 class Product {
 
-    private String name;
+    private final String name;
     private double price;
 
     public Product(String name, double price) {
