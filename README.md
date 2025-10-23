@@ -6,7 +6,7 @@ configure a method that throws an indexOutOfBounds.
 
 Nivell 2:
 Configure a class to manage the exceptions that could be thrown when introducing data through
-a scanner (keyboard).
+a scanner (keyboard). Include methods that catch a customized exception.
 
 
 

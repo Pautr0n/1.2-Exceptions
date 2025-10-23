@@ -1,14 +1,14 @@
 
-class SalesTest{
+class SalesTest {
 
-    void main() {
+    public static void main(String[] args) {
 
         Sale sale1 = new Sale();
 
-        try{
+        try {
             sale1.getTotalCost(sale1.getProducts());
         } catch (EmptySaleException e) {
-           IO.println(e);
+            System.out.println(e);
         }
 
         Product productA = new Product("Fanta naranja", 2.10);
@@ -17,16 +17,16 @@ class SalesTest{
         sale1.addProduct(productA);
         sale1.addProduct(productB);
 
-        try{
-            IO.println(sale1.getTotalCost(sale1.getProducts()));
+        try {
+            System.out.println(sale1.getTotalCost(sale1.getProducts()));
         } catch (EmptySaleException e) {
-            IO.println(e);
+            System.out.println(e);
         }
 
-        try{
+        try {
             sale1.getOutOfBoundsTotalCost(sale1.getProducts());
         } catch (RuntimeException e) {
-            IO.println(e);
+            System.out.println(e);
         }
 
     }

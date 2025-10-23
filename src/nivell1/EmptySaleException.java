@@ -1,7 +1,7 @@
-public class EmptySaleException extends Exception {
+class EmptySaleException extends Exception {
 
 
-    EmptySaleException(String errorMessage){
+    protected EmptySaleException(String errorMessage) {
 
         super(errorMessage);
 
